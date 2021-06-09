@@ -1,11 +1,26 @@
-<mxfile host="app.diagrams.net" modified="2021-06-09T09:32:43.069Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="17oAsPV6U4R8UCpr4v9h" version="14.7.6" type="github">
+<mxfile host="app.diagrams.net" modified="2021-06-09T10:20:54.347Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/90.0.4430.93 Safari/537.36" etag="Gl3iu0c_9xMYiK2b98Zw" version="14.7.6" type="github">
   <diagram id="rhb-H16X4fZYKhtMxxJS" name="Page-1">
     <mxGraphModel dx="1278" dy="548" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
-        <mxCell id="jpGjnAvAdZJ158E3ajTV-1" value="sd&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="450" y="210" width="120" height="60" as="geometry" />
+        <mxCell id="rVFDM0llo8ZTLJLAQAU1-3" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rVFDM0llo8ZTLJLAQAU1-1" target="rVFDM0llo8ZTLJLAQAU1-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVFDM0llo8ZTLJLAQAU1-1" value="&lt;span style=&quot;color: rgb(51 , 51 , 51) ; font-size: 13px ; font-family: , &amp;#34;pingfang sc&amp;#34;&quot;&gt;任何界面扭开紧急开锁按钮（&lt;/span&gt;&lt;span style=&quot;font-size: 13px ; font-family: , &amp;#34;pingfang sc&amp;#34; ; color: rgb(236 , 128 , 141)&quot;&gt;除了补给、盘点等正常流程开启&lt;/span&gt;&lt;span style=&quot;color: rgb(51 , 51 , 51) ; font-size: 13px ; font-family: , &amp;#34;pingfang sc&amp;#34;&quot;&gt;）&lt;/span&gt;" style="rounded=1;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="300" y="20" width="200" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="rVFDM0llo8ZTLJLAQAU1-5" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="rVFDM0llo8ZTLJLAQAU1-2" target="rVFDM0llo8ZTLJLAQAU1-4">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="rVFDM0llo8ZTLJLAQAU1-2" value="&lt;p style=&quot;margin: 0px ; color: rgb(51 , 51 , 51) ; font-family: , &amp;#34;pingfang sc&amp;#34; ; font-size: 13px&quot;&gt;1.开启计时&lt;/p&gt;&lt;p style=&quot;margin: 0px ; color: rgb(51 , 51 , 51) ; font-family: , &amp;#34;pingfang sc&amp;#34; ; font-size: 13px&quot;&gt;2.抽屉门开启状态感应&lt;/p&gt;&lt;p style=&quot;margin: 0px ; color: rgb(51 , 51 , 51) ; font-family: , &amp;#34;pingfang sc&amp;#34; ; font-size: 13px&quot;&gt;3.开启单支药品取出感应&lt;/p&gt;&lt;p style=&quot;margin: 0px ; color: rgb(51 , 51 , 51) ; font-family: , &amp;#34;pingfang sc&amp;#34; ; font-size: 13px&quot;&gt;4.开启外置器械/设备，内置器械/设备取出感应&lt;/p&gt;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="263.75" y="120" width="272.5" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="rVFDM0llo8ZTLJLAQAU1-4" value="各类设备、物品可显示状态" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="250" width="120" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="rVFDM0llo8ZTLJLAQAU1-6" value="结束抢救按钮进入物资清点页面" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="340" y="360" width="120" height="60" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>

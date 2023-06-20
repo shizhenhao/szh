@@ -109,6 +109,9 @@ public class StringSame {
         if (str15.contains("测血压")) {
             String[] s = str15.split("测血压");
             str15 = s[0].concat("测血压").concat("tid").concat(s[1]);
+            
+            String str16 = str15.replace("测血压", "测血压tid");
+            System.out.println(str16);
         }
         System.out.println(str15);
     }

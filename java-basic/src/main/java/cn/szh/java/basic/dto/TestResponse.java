@@ -6,13 +6,15 @@ import java.util.List;
  * @author Zhenhao.Shi
  * @date 2023/4/24 10:30
  */
-public class VitalSignsViewResponse {
+public class TestResponse {
 
     //@ApiModelProperty("id")
     private Integer id;
 
+    private String name;
+
     //@ApiModelProperty("id信息集合")
-    private List<VitalSignsViewResponse> idList;
+    private List<TestResponse> idList;
 
     public Integer getId() {
         return id;
@@ -22,11 +24,19 @@ public class VitalSignsViewResponse {
         this.id = id;
     }
 
-    public List<VitalSignsViewResponse> getIdList() {
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public List<TestResponse> getIdList() {
         return idList;
     }
 
-    public void setIdList(List<VitalSignsViewResponse> idList) {
+    public void setIdList(List<TestResponse> idList) {
         this.idList = idList;
     }
 }

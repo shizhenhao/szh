@@ -16,11 +16,13 @@ public class Null {
     public static void main(String[] args) {
         //2.null永远不能和八大基本数据类型进行赋值运算等,否则不是编译出错,就是运行出错.
         Integer nul = null;
+        //下面这行报NullPointerException
+        //System.out.println(2 + nul);
+
+        //3.null可以和字符串进行运算.
         System.out.println("12" + nul);
 
-        Integer o = 2 + nul;
-        System.out.println(o);
-
+        //null点任何属性都报空指针
         try {
             String str = null;
             System.out.println(str.length());
@@ -28,10 +30,24 @@ public class Null {
             System.out.println("空指针异常");
         }
 
-        ((Null) null).hello();
+        //null不可以用于if判断，下面这段报空指针
+        //boolean bb = null;     这种直接编译不通过
+        Boolean b = null;
+        //if(b){
+        //    System.out.println(2222);
+        //}
+
+        //这个null的包装类可以调方法
+        Null.hello();
+        //这种报空指针
+        ((Null) null).hello2();
     }
 
-    private void hello() {
+    private static void hello() {
         System.out.println("HELLO");
+    }
+
+    private void hello2() {
+        System.out.println("HELLO2");
     }
 }

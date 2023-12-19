@@ -100,7 +100,6 @@ public class Test {
         for (String s : list) {
             System.out.println(s);
         }
-        System.out.println("shizhenhao ");
         System.out.println(ff);
         if (null == ii) {
             System.out.println("asfag");

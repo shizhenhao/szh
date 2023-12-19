@@ -109,11 +109,55 @@ public class StringSame {
         if (str15.contains("测血压")) {
             String[] s = str15.split("测血压");
             str15 = s[0].concat("测血压").concat("tid").concat(s[1]);
-            
+
             String str16 = str15.replace("测血压", "测血压tid");
             System.out.println(str16);
         }
         System.out.println(str15);
+
+
+        //整理浏览器 - 博客下的文章
+        /*// 在堆中创建字符串对象”Java“
+// 将字符串对象”Java“的引用保存在字符串常量池中
+        String s1 = "Java";
+// 直接返回字符串常量池中字符串对象”Java“对应的引用
+        String s2 = s1.intern();
+// 会在堆中在单独创建一个字符串对象
+        String s3 = new String("Java");
+// 直接返回字符串常量池中字符串对象”Java“对应的引用
+        String s4 = s3.intern();
+// s1 和 s2 指向的是堆中的同一个对象
+        System.out.println(s1 == s2); // true
+// s3 和 s4 指向的是堆中不同的对象
+        System.out.println(s3 == s4); // false
+// s1 和 s4 指向的是堆中的同一个对象
+        System.out.println(s1 == s4); //true
+        System.out.println(s1 == s3); //false
+
+        String s5 = new String("Hello,Java");
+        String s6 = new String("Hello,Java");
+        String s7 = "Hello,Java";
+        String s8 = "Hello,Java";
+        System.out.println(s5 == s6);//false
+        System.out.println(s7 == s5);//false
+        System.out.println(s7 == s6);//false
+        System.out.println(s8 == s7);//true*/
+
+
+        //整理浏览器 - 博客下的文章
+        /*字符串动态拼接时，例如String s = “a” + new String(“b”)，String s = new String(“a”) + new String(“b”)，String s = x + y，本质上是调用了StringBuilder中的append方法，
+        最后使用toString()转换为String类型，这样创建出来的对象在堆中，并且不会像new String(“abc”)一样去常量池中创建一个字符串。*/
+        //结合javaGuide中的 String str4 = str1 + str2; 进行合并整理
+
+        String s1 = new String("a") + new String("b"); // 堆
+// 此时常量池中有["a","b"]，注意并没有"ab"，因为动态拼接并不会在常量池中创建对象。
+
+        String s2 = s1.intern(); // s2为常量池中的“ab”，由于常量池中没有"ab"，创建一个"ab"，并且这个"ab"的引用与s1相同。
+// 此时常量池中有["a","b","ab"]，其中"ab"的引用为s1的引用
+        System.out.println(s1 == "ab"); // 是同一个引用
+        System.out.println(s2 == "ab"); // s2就是常量池中的"ab"，显然为true
+
+
     }
 
 }

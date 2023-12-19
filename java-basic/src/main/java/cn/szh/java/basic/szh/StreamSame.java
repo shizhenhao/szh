@@ -15,10 +15,25 @@ import java.util.stream.Stream;
 public class StreamSame {
 
     public static void main(String[] args) {
+/*        PkgBoxEventStateEnum stateEnum = Arrays.stream(PkgBoxEventStateEnum.values()).parallel()
+                .filter(i -> Objects.equals(i.getOperateState(), request.getType()))
+                .findAny().orElse(null);
+        PkgBoxEventStateEnum stateEnum = Arrays.stream(PkgBoxEventStateEnum.values())
+                .filter(i -> Objects.equals(i.getOperateState(), request.getType()))
+                .findAny().orElse(null);*/
+
         //创建流-三种方式
         create();
 
         List<Integer> numbers = Arrays.asList(1, 2, 2, 3, 3, 7, 6, 5);
+        List<String> numberss = Arrays.asList("1", "2");
+        Set<String> integerSet = numberss.parallelStream().collect(Collectors.toSet());
+        integerSet.add("0");
+        integerSet.add(null);
+        integerSet.add("");
+        integerSet.add("");
+        System.out.println(integerSet);
+
         //匹配所有、匹配任意一个、都不匹配
         allMatch(numbers);
         //anyMatch();
@@ -30,7 +45,7 @@ public class StreamSame {
         //filter-过滤
         filter(numbers);
 
-        //map-
+        //map-转换流（可用于提取集合的某个属性为新集合）
         map(numbers);
 
         //flatMap-取集合的子集
@@ -178,6 +193,10 @@ public class StreamSame {
         List<Integer> collect1 = collect.parallelStream().map(TestResponse::getId).collect(Collectors.toList());
         System.out.println(collect);
         System.out.println(collect1);
+
+        List<Integer> collect2 = testResponses.parallelStream()
+                .flatMap(i -> i.getIdList().parallelStream().map(TestResponse::getId)).collect(Collectors.toList());
+        System.out.println(collect2);
     }
 
     private static void optional() {

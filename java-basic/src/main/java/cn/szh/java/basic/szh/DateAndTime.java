@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 import java.util.Date;
 
 /**
@@ -29,6 +30,9 @@ public class DateAndTime {
         System.out.println(LocalDateTime.parse(LocalDate.now() + "T08:00"));
         //与上面输出结果相同
         System.out.println(LocalDateTime.parse(LocalDate.now() + "T08:00:00"));
+
+        LocalDate localDate = LocalDate.parse("2023/10/18", DateTimeFormatter.ofPattern("yyyy/MM/dd"));
+        System.out.println(localDate);
 
         LocalTime parse = LocalTime.parse("10:30");
         System.out.println(parse);

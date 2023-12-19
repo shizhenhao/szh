@@ -5,6 +5,7 @@ import cn.hutool.core.collection.ListUtil;
 import org.apache.commons.lang3.ArrayUtils;
 
 import java.util.*;
+import java.util.concurrent.ConcurrentHashMap;
 import java.util.stream.Collectors;
 
 /**
@@ -13,6 +14,23 @@ import java.util.stream.Collectors;
  */
 public class ListSame {
     public static void main(String[] args) {
+        //set可以存储null
+        Set<Integer> set = new HashSet<>();
+        set.add(null);
+        System.out.println(set);
+
+        Map<Integer, String> map = new HashMap<>();
+        map.put(null, "2");
+        System.out.println(map.get(null));
+
+        //Hashtable和ConcurrentHashMap是线程安全的
+        //Hashtable 基本被淘汰
+        Map<Integer, String> hashtable = new Hashtable<>();
+        hashtable.put(null, "2");
+        System.out.println(hashtable.get(null));
+
+        new ConcurrentHashMap<>();
+
         //创建
         List<Integer> list1 = new ArrayList<>();
         List<String> list2 = Arrays.asList("a", "b", "c");

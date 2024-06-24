@@ -1,5 +1,7 @@
 package cn.szh.java.basic.szh;
 
+import cn.hutool.core.collection.ListUtil;
+
 import java.util.*;
 import java.util.Map.Entry;
 
@@ -10,6 +12,15 @@ import java.util.Map.Entry;
 public class CollectionSame {
 
     public static void main(String[] args) {
+        List<String> list1 = ListUtil.toList("22");
+        List<String> list2 = ListUtil.toList();
+        list1.addAll(list2);
+        System.out.println(list1);
+
+        String remove = list1.remove(0);
+        System.out.println(remove);
+
+
         // 数组创建两种方式
         int[] arr = {1, 7, 4};// 静态创建，直接赋值 。
         // 和list一致，debug时是[1,4,7],可用增强型for循环，对象（例HashMap）不可循环。

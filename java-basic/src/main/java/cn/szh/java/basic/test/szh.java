@@ -11,6 +11,14 @@ import java.util.Objects;
 public class szh {
 
     public static void main(String[] args) {
+        Long id = 0L;
+        if(Objects.equals(id, 0)){
+            System.out.println("23233");
+        }
+
+
+        //IdWorker.getId(); 雪花算法
+
         String str1 = "str";
         String str2 = "ing";
         String str3 = "str" + "ing";

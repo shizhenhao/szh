@@ -19,6 +19,9 @@ public class ListSame {
         set.add(null);
         System.out.println(set);
 
+        //单个变量转换为set
+        Set<Integer> idSet = Collections.singleton(2);
+
         Map<Integer, String> map = new HashMap<>();
         map.put(null, "2");
         System.out.println(map.get(null));

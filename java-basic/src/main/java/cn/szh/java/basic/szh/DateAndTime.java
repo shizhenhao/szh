@@ -6,6 +6,7 @@ import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Date;
+import java.util.Objects;
 
 /**
  * @author Zhenhao.Shi
@@ -14,16 +15,24 @@ import java.util.Date;
 public class DateAndTime {
 
     public static void main(String[] args) {
+        LocalDateTime localDateTime2 = LocalDateTime.now();
+        LocalDateTime localDateTime3 = LocalDateTime.now();
+        if (Objects.equals(localDateTime2, localDateTime3)) {
+            System.out.println("localDateTime相等");
+        }
+
         //当天开始时间
         LocalDateTime localDateTime1 = LocalDate.now().atStartOfDay();
         System.out.println(localDateTime1);
         System.out.println(LocalDateTime.of(LocalDate.now(), LocalTime.MAX));
+        System.out.println(LocalDateTime.now().withHour(23).withMinute(59).withSecond(59));
+        System.out.println(localDateTime1.plusDays(1).minusSeconds(1));
 
 
         System.out.println("now:");
         System.out.println(new Date());
         System.out.println(LocalDate.now());
-        System.out.println(LocalDateTime.now());
+        System.out.println(localDateTime2);
         System.out.println(LocalTime.now());
 
         System.out.println("\nString型转换:");
@@ -46,7 +55,7 @@ public class DateAndTime {
         System.out.println(t);
         System.out.println((int) Math.ceil(t));
 
-        LocalDateTime now2 = LocalDateTime.now();
+        LocalDateTime now2 = localDateTime2;
         LocalDateTime localDateTime = now2.minusMinutes(10);
         System.out.println(now2);
         System.out.println(localDateTime);
@@ -56,8 +65,8 @@ public class DateAndTime {
 
 
         //相差时分
-        LocalDateTime now3 = LocalDateTime.now();
-        LocalDateTime now4 = LocalDateTime.now().plusMinutes(52);
+        LocalDateTime now3 = localDateTime2;
+        LocalDateTime now4 = localDateTime2.plusMinutes(52);
         Duration between = Duration.between(now3, now4);
         System.out.println(between.toHours());
         System.out.println(between.toMinutes());

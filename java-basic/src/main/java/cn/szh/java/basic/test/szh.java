@@ -11,6 +11,9 @@ import java.util.Objects;
 public class szh {
 
     public static void main(String[] args) {
+
+
+
         Long id = 0L;
         if(Objects.equals(id, 0)){
             System.out.println("23233");

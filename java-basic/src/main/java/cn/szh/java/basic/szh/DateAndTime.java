@@ -1,5 +1,9 @@
 package cn.szh.java.basic.szh;
 
+import cn.hutool.core.date.DatePattern;
+import cn.hutool.core.date.DateTime;
+import cn.hutool.core.date.DateUtil;
+
 import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -15,6 +19,19 @@ import java.util.Objects;
 public class DateAndTime {
 
     public static void main(String[] args) {
+        LocalDateTime ss =  LocalDateTime.of(LocalDate.now(), LocalTime.MAX);
+        System.out.println(ss);
+
+        String format = DateUtil.format(new Date(), DatePattern.NORM_DATETIME_FORMATTER);
+        System.out.println(format);
+
+        String str = "2024-11-04 09:56:00.0";
+//        LocalDateTime parse1 = LocalDateTime.parse(str, DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
+//        System.out.println(parse1);
+        DateTime parse2 = DateUtil.parse(str, "yyyy-MM-dd HH:mm:ss");
+        System.out.println(parse2);
+
+
         LocalDateTime localDateTime2 = LocalDateTime.now();
         LocalDateTime localDateTime3 = LocalDateTime.now();
         if (Objects.equals(localDateTime2, localDateTime3)) {

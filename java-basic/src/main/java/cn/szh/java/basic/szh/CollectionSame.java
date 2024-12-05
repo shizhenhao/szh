@@ -20,6 +20,11 @@ public class CollectionSame {
         String remove = list1.remove(0);
         System.out.println(remove);
 
+        Set<Long> userIdSet = new HashSet<>();
+        userIdSet.add(12L);
+        if(userIdSet.contains(1L)){
+            System.out.println("包含");
+        }
 
         // 数组创建两种方式
         int[] arr = {1, 7, 4};// 静态创建，直接赋值 。

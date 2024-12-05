@@ -29,8 +29,8 @@ public class ListSame {
         //Hashtable和ConcurrentHashMap是线程安全的
         //Hashtable 基本被淘汰
         Map<Integer, String> hashtable = new Hashtable<>();
-        hashtable.put(null, "2");
-        System.out.println(hashtable.get(null));
+//        hashtable.put(null, "2");
+//        System.out.println(hashtable.get(null));
 
         new ConcurrentHashMap<>();
 
@@ -41,6 +41,9 @@ public class ListSame {
         List<String> list4 = ListUtil.toList("1", "2");
         List<Integer> list6 = CollectionUtil.newArrayList(1, 2);
 
+        //addAll可以添加空集合
+        list2.addAll(list3);
+        System.out.println(list2);
 
         //排序
         List<Integer> list = new ArrayList<>();

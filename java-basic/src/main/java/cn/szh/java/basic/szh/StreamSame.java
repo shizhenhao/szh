@@ -2,7 +2,9 @@ package cn.szh.java.basic.szh;
 
 import cn.hutool.core.collection.ListUtil;
 import cn.szh.java.basic.dto.TestResponse;
+import cn.szh.java.basic.szh.T.Method;
 
+import java.lang.reflect.Field;
 import java.util.*;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
@@ -15,6 +17,32 @@ import java.util.stream.Stream;
 public class StreamSame {
 
     public static void main(String[] args) {
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", "szh");
+        map.put("age", 18);
+        map.put("sex", "男");
+
+        Method.maximum(1, 2, 3);
+
+        TestResponse response2 = new TestResponse();
+        response2.setId(2);
+        response2.setName("李四");
+        TestResponse response4 = new TestResponse();
+        response4.setId(2);
+        response4.setName("李四4");
+        TestResponse response3 = new TestResponse();
+        response3.setId(1);
+        response3.setName("张三3");
+        TestResponse response = new TestResponse();
+        response.setId(1);
+        response.setName("张三");
+
+        List<TestResponse> list = ListUtil.toList( response2, response4, response3,response);
+        Map<Integer, List<TestResponse>> collect = list.stream().collect(Collectors.groupingBy(TestResponse::getId));
+
+
+
+
 /*        PkgBoxEventStateEnum stateEnum = Arrays.stream(PkgBoxEventStateEnum.values()).parallel()
                 .filter(i -> Objects.equals(i.getOperateState(), request.getType()))
                 .findAny().orElse(null);
